@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh 'make'
         catchError(catchInterruptions: true) {
-          mail(subject: 'Failure', body: 'Falite', from: 's.g.navingoyal@gmail.com', to: 'sahil@gmail.com')
+          mail(subject: 'Failure', body: 'Falite', from: 's.g.navingoyal@gmail.com', to: 'sahil@simyog.com')
         }
 
       }
