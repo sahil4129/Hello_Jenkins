@@ -4,7 +4,10 @@ pipeline {
     stage('Build') {
       steps {
         sh 'make'
-        mail(subject: 'fail', body: 'jhkh', to: 'sahil@simyog.com')
+        catchError(catchInterruptions: true) {
+          mail(subject: 'Failure', body: 'Falite', from: 's.g.navingoyal@gmail.com', to: 'sahil@gmail.com')
+        }
+
       }
     }
 
